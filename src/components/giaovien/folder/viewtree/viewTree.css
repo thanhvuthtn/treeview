@@ -1,0 +1,12 @@
+.textFolderStyle {
+    margin: 2px;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+.textFolderStyle:focus,
+.textFolderStyle:active {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #099807;
+}
