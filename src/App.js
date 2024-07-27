@@ -1,7 +1,5 @@
 import './App.css'
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import MyNavbar from './components/mynavbar/mynavbar'
@@ -11,6 +9,10 @@ import ToTruong from './components/totruong/totruong'
 import Home from './components/home/home'
 import GiaoVien from './components/giaovien/giaovien'
 import Footer from './components/footer/footer'
+import DeThi from './components/dethi/dethi'
+import Folder from './components/giaovien/folder/Folder'
+import DacTa from './components/giaovien/dacta/dacta'
+import CauHoi from './components/giaovien/cauhoi/cauhoi'
 
 function App () {
   return (
@@ -23,6 +25,10 @@ function App () {
           <Route path='/admin' element={<Admin />} />
           <Route path='/totruong' element={<ToTruong />} />
           <Route path='/giaovien' element={<GiaoVien />} />
+          <Route path='/dethi' element={<DeThi />} />
+          <Route path='/giaovien/folder' element={<Folder />} />
+          <Route path='/giaovien/dacta' element={<DacTa />} />
+          <Route path='/giaovien/cauhoi' element={<CauHoi />} />
         </Routes>
       </BrowserRouter>
       <Footer />

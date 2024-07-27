@@ -1,0 +1,22 @@
+ul > li {
+    display: inline-block;
+    /* You can also add some margins here to make it look prettier */
+}
+
+li{
+    margin-right: 5px;
+    padding-right: 2px;
+}
+
+a:link { 
+    text-decoration: none; 
+  } 
+  a:visited { 
+    text-decoration: none; 
+  } 
+  a:hover { 
+    text-decoration: none; 
+  } 
+  a:active { 
+    text-decoration: none; 
+  }

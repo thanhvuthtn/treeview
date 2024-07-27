@@ -2,7 +2,7 @@ import { Container, Navbar, Nav, Col, Row } from 'react-bootstrap'
 const MyNavbar = () => {
   return (
     <Row>
-      <Col xs={8}>
+      <Col>
         <Navbar bg='light' data-bs-theme='light'>
           <Container>
             <Navbar.Brand href='/home'>NHCH</Navbar.Brand>
@@ -10,21 +10,17 @@ const MyNavbar = () => {
               <Nav.Link href='/admin'>Admin</Nav.Link>
               <Nav.Link href='/totruong'>Tổ Truỏng</Nav.Link>
               <Nav.Link href='/giaovien'>Giáo viên</Nav.Link>
+              <Nav.Link href='/dethi'>Đề thi</Nav.Link>
             </Nav>
           </Container>
         </Navbar>
       </Col>
-      <Col xs={3}>
-        <Row>
-          <>Email: thanhvu@thtn.info</>
-        </Row>
-        <Row>
-          <>Quyền: Tổ trưởng</>
-        </Row>
-      </Col>
       <Col>
-        <Row>Logout</Row>
-        <Row>Đổi mật khẩu</Row>
+        <Row>
+          <div style={{ textAlign: 'end', fontSize: '75%', color: '#752e01' }}>
+            Email: thanhvu@thtn.info - Quyền: Tổ trưởng - Logout - Đổi mật khẩu
+          </div>
+        </Row>
       </Col>
       <hr />
     </Row>
