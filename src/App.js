@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import MyNavbar from './components/mynavbar/mynavbar'
+import Admin from './components/admin/admin'
+import Login from './components/Login/login'
+import ToTruong from './components/totruong/totruong'
+import Home from './components/home/home'
+import GiaoVien from './components/giaovien/giaovien'
+import Footer from './components/footer/footer'
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Container>
+      <MyNavbar />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/home' element={<Home />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/admin' element={<Admin />} />
+          <Route path='/totruong' element={<ToTruong />} />
+          <Route path='/giaovien' element={<GiaoVien />} />
+        </Routes>
+      </BrowserRouter>
+      <Footer />
+    </Container>
+  )
 }
 
-export default App;
+export default App
