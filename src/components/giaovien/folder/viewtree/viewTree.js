@@ -2,12 +2,12 @@ import { FaFolderOpen } from 'react-icons/fa6'
 import { FaFolderClosed } from 'react-icons/fa6'
 import { useState } from 'react'
 import './viewTree.css'
-//import { useDispatch } from 'react-redux'
-//import { readTree } from '../redux/treeslice'
+import { useDispatch } from 'react-redux'
+import { readTree } from '../../../../redux/treeslice'
 
 const ViewTree = props => {
   //Redux
-  //const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
   //Data
   const { tree, level, isShow } = props
@@ -43,7 +43,7 @@ const ViewTree = props => {
       isFolder: tree.isFolder,
       numberChildren: tree.children.length
     }
-    //dispatch(readTree(currentNode))
+    dispatch(readTree(currentNode))
   }
   return (
     <div style={showNodeStyle}>
