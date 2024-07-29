@@ -37,12 +37,13 @@ const ViewTree = props => {
     setShow(!show)
   }
   const nodeSelectedHandle = () => {
-    let currentNode = {
+    let currentNode = tree
+    /*  {
       id: tree.id,
       name: tree.name,
       isFolder: tree.isFolder,
       numberChildren: tree.children.length
-    }
+    } */
     dispatch(readTree(currentNode))
   }
   return (

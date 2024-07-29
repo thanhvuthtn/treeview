@@ -9,6 +9,10 @@ const treeSlice = createSlice({
     readTree: (state, action) => {
       const newTree = action.payload
       state.tree = newTree
+    },
+    AddChild: (state, action) => {
+      const childNode = action.payload
+      state.tree.children.push(childNode)
     }
   }
 })
@@ -22,4 +26,4 @@ export default treeReducer
 //export
 export const treeSelector = state => state.treeReducer.tree
 
-export const { readTree } = treeSlice.actions
+export const { readTree, addChild } = treeSlice.actions

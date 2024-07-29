@@ -8,7 +8,7 @@ const NodeInfo = () => {
         <h5>Thư mục hiện hành</h5>
       </div>
       <div>Tên: {currentNode.name}</div>
-      <div>Số con: {currentNode?.numberChildren}</div>
+      <div>Số con: {currentNode.children?.length}</div>
       <hr />
     </>
   )
